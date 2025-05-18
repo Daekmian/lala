@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Naranjos Restaurante</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  <header>
+    <img src="tt.png" alt="Perfil Restaurante" class="profile-img" />
+    <h1>LOS NARANJOS RESTAURANTE</h1>
+    <p class="subtitulo">Auténtico sabor a fuego</p>
+    <p class="descripcion">
+      En Los Naranjos llevamos la tradición a otro nivel con nuestro Tatakua.
+      Un horno de barro que despierta los sabores más puros y auténticos.
+    </p>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#carousel">Galería</a></li>
+      <li><a href="#menu">Carta</a></li>
+      <li><a href="#contacto">Ubicación</a></li>
+    </ul>
+  </nav>
+
+  <section id="carrousel">
+  <h2>Galería del Restaurante</h2>
+   <p>Fotos en el local</p>
+
+  <div class="carousel-wrapper">
+    <button class="btn btn-left" onclick="scrollCarousel( 'carousel',-1)">❮</button>
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-item"><img src="local1.jpg" alt="local1" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="local2.jpg" alt="local2" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="local3.jpg" alt="local3" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="local4.jpg" alt="local4" onclick="openPopup(this.src)"></div>
+       <div class="carousel-item"><img src="local5.jpg" alt="local5" onclick="openPopup(this.src)"></div>
+    </div>
+    <button class="btn btn-right" onclick="scrollCarousel('carousel',1)">❯</button>
+  </div>
+
+</section>
+
+
+<section id="menu">
+  <h2>Menú Destacado</h2>
+  <div class="carousel-wrapper">
+    <button class="btn btn-left" onclick="scrollCarousel('menu-carousel', -1)">‹</button>
+    
+    <div class="carousel-container" id="menu-carousel">
+      <div class="carousel-item"><img src="Menu1.jpg" alt="Menu1" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu2.jpg" alt="Menu2" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu3.jpg" alt="Menu3" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu4.jpg" alt="Menu4" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu5.jpg" alt="Menu5" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu6.jpg" alt="Menu6" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu7.jpg" alt="Menu7" onclick="openPopup(this.src)"></div>
+      <div class="carousel-item"><img src="Menu8.jpg" alt="Menu8" onclick="openPopup(this.src)"></div>
+      <!-- Agregá más imágenes según necesites -->
+    </div>
+    
+    <button class="btn btn-right" onclick="scrollCarousel('menu-carousel', 1)">›</button>
+  </div>
+</section>
+
+
+  <footer>
+    <section id="contacto">
+      <h2>Ubicación</h2>
+      <p>Ubicación: En La Heroica Piribebuy, Barrio Virgen Del Rosario</p>
+      <h2>Horario de atención</h2>
+      
+      <ul>
+        <li>Jueves a Viernes: 19:00 hs a 23:00 hs</li>
+        <li>Sábados y Domingos: 11:00 hs a 15:00 hs y 19:00 hs a 23:00 hs</li>
+      </ul>
+      </footer>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <span class="popup-close" onclick="closePopup()">×</span>
+    <img id="popup-img" src="" alt="">
+  </div>
+
+  <div id="popup-container" onclick="closePopup()">
+  <span id="popup-close" onclick="closePopup()">×</span>
+  <img id="popup-image" src="" alt="">
+</div>
+
+  <script src="script.js"></script>
+
+  <a href="https://wa.me/595982282143" class="whatsapp-float" target="_blank" title="Chatear por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+</a>
+
+</body>
+</html>
